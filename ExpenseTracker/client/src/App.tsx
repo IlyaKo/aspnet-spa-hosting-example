@@ -22,7 +22,7 @@ export default function App() {
     <div>
       <ul className="m-2">
         {expenses.map((expense, index) => (
-          <ul key={index}>
+          <li key={index}>
             <div className="card my-2 p-4">
               <div className="card-body">
                 <p className="card-title is-size-4 has-text-weight-semibold">
@@ -42,10 +42,10 @@ export default function App() {
                 </p>
               </div>
             </div>
-          </ul>
+          </li>
         ))}
-        {expenses.length && (
-          <ul>
+        {expenses.length > 0 && (
+          <li>
             <div className="card p-5">
               <div className="card-body">
                 <p className="card-title is-size-2 has-text-info has-text-weight-bold">
@@ -58,7 +58,7 @@ export default function App() {
                 </p>
               </div>
             </div>
-          </ul>
+          </li>
         )}
       </ul>
     </div>
